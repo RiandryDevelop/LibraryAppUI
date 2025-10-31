@@ -12,6 +12,8 @@ import DeleteBookModal from "../crud-components/DeleteBookModal";
 const HomeScreen = () => {
   const {userInfo, isLoading, logout} = useContext(AuthContext);
   const [book, setBook] = useState([]);
+
+ 
   const [isAddBookModalOpen, setAddBookModalOpen] = useState(false);
   const [isEditBookModalOpen, setEditBookModalOpen] = useState(false);
   const [isDeleteBookModalOpen, setDeleteBookModalOpen] = useState(false);
@@ -71,10 +73,13 @@ const HomeScreen = () => {
     getData();
   }
 
+
+
   return (
     <ScrollView>
     <Spinner visible={isLoading} />
     <Text style={styles.welcome}>Welcome {userInfo.email}</Text>
+    <Text style={styles.welcome}>Welcome USER</Text>
     <Button title="Logout" color="red" onPress={logout} />
     <View style={styles.container}>
       <TouchableOpacity

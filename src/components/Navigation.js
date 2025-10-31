@@ -13,6 +13,7 @@ import SplashScreen from '../screens/SplashScreen';
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
+  const showScreen = true;
   const {userInfo, splashLoading} = useContext(AuthContext);
  
   return (
